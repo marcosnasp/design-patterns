@@ -1,4 +1,4 @@
-package edu.fa7.posgrad.reuso.patterns.composite;
+package br.edu.fa7.posgrad.reuso.patterns.composite;
 
 import java.util.List;
 

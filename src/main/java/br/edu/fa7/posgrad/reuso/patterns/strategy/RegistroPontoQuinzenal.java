@@ -1,6 +1,6 @@
-package edu.fa7.posgrad.reuso.patterns.strategy;
+package br.edu.fa7.posgrad.reuso.patterns.strategy;
 
-import edu.fa7.posgrad.reuso.patterns.strategy.interfaces.ModoRegistroPonto;
+import br.edu.fa7.posgrad.reuso.patterns.strategy.interfaces.ModoRegistroPonto;
 
 import java.util.logging.Logger;
 

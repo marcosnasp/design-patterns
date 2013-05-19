@@ -1,4 +1,4 @@
-package edu.fa7.posgrad.reuso.patterns.composite;
+package br.edu.fa7.posgrad.reuso.patterns.composite;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -17,6 +17,17 @@ public class CompositeMain {
         arquivos.add(arquivo);
 
         Component pasta = new Pasta("NomePasta", arquivos);
+
+        pasta.imprimir();
+
+        List<Component> arquivosList = new ArrayList<Component>();
+        arquivosList.add(arquivo);
+        arquivosList.add(arquivo);
+
+        Pasta p = (Pasta) pasta;
+        p.setPastas(arquivosList);
+
+        p.imprimir();
 
         pasta.imprimir();
 
