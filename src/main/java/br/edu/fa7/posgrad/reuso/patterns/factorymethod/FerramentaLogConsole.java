@@ -10,11 +10,20 @@ public class FerramentaLogConsole extends FerramentaLog {
     private ConsoleLog consoleLog;
 
     public FerramentaLogConsole(ConsoleLog consoleLog) {
-        this.consoleLog = consoleLog;
+        if(consoleLog != null) {
+            this.consoleLog = consoleLog;
+        } else {
+            consoleLog = new ConsoleLog();
+        }
+
+    }
+
+    public FerramentaLogConsole() {
+        this.consoleLog = new ConsoleLog();
     }
 
     @Override
     public void escreverLog(String saida) {
-        consoleLog.getConsole().writer().println(saida);
+        this.consoleLog.getConsole().println(saida);
     }
 }

@@ -17,11 +17,11 @@ public abstract class Login {
     public abstract void avisoSucesso();
 
     public void avisoVisual() {
-        LOGGER.info("Autenticando utilizando as informacoes do usuario");
+        LOGGER.info("Autenticando utilizando as informacoes do usuario" + "\n");
     }
 
     public void prompt() {
-        LOGGER.info("Apresentar o prompt de autenticacao");
+        LOGGER.info("Apresentar o prompt de autenticacao" + "\n");
     }
 
     public final void login() {

@@ -7,10 +7,19 @@ package br.edu.fa7.posgrad.reuso.patterns.factorymethod;
  */
 public class FactoryMethodMain {
 
-    private EscrevedorLog escrevedorLog;
-
-
     public static void main(String[] args) {
+
+        EscrevedorLog escrevedorLog = new EscrevedorLogConsole();
+        EscrevedorLog escrevedorLogArquivo = new EscrevedorLogArquivo();
+
+        FerramentaLog ferramentaLogArquivo = new FerramentaLogArquivo();
+        FerramentaLog ferramentaLogConsole = new FerramentaLogConsole();
+
+        Cliente clienteArquivo = new Cliente(ferramentaLogArquivo);
+        Cliente clienteConsole = new Cliente(ferramentaLogConsole);
+
+        clienteArquivo.contar();
+        clienteConsole.contar();
 
     }
 

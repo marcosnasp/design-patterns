@@ -8,6 +8,11 @@ package br.edu.fa7.posgrad.reuso.patterns.templatemethod;
 public class TemplateMethodMain {
 
     public  static void main(String[] args) {
+        Login loginDecisionSupportSystem = new LoginDecisionSupportSystem();
+        loginDecisionSupportSystem.login();
+
+        Login loginERP = new LoginERP();
+        loginERP.login();
 
     }
 

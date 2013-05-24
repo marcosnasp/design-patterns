@@ -13,12 +13,12 @@ public class LoginERP extends Login {
 
     @Override
     public void autenticar() {
-        LOGGER.info("Autenticar usuario com Login Decision Support System" + "\n");
+        LOGGER.info("Autenticar usuario com Login ERP" + "\n");
     }
 
     @Override
     public void avisoSucesso() {
-        LOGGER.info("Usuario autenticado com sucesso. Apresentando aviso de sucesso com LoginDecisionSupportSystem." + "\n");
+        LOGGER.info("Usuario autenticado com sucesso. Apresentando aviso de sucesso com Login ERP." + "\n");
     }
 
 }
