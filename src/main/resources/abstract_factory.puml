@@ -1,0 +1,76 @@
+@startuml
+/' ABSTRACT FACTORY '/
+
+class AbstractFactoryMain {
+    + static void main(String[] args)
+}
+
+interface BotaoListener {
+    + void executarAcao()
+}
+
+abstract class Botao implements BotaoListener {
+}
+
+interface JanelaListener {
+    + void executarAcao()
+}
+
+abstract class Janela implements JanelaListener {
+}
+
+abstract class AbstractFactoryGUI {
+    + abstract Botao criarBotao()
+    + abstract Janela criarJanela()
+}
+
+class BotaoMacOS extends Botao {
+    + void executarAcao()
+}
+
+class BotaoUnix extends Botao {
+    + void executarAcao()
+}
+
+class BotaoWindows extends Botao {
+    + void executarAcao()
+}
+
+class JanelaMacOs extends Janela {
+    + void executarAcao()
+}
+
+class JanelaUnix extends Janela {
+    + void executarAcao()
+}
+
+class JanelaWindows extends Janela {
+    + void executarAcao()
+}
+
+class FactoryMacOSGUI extends AbstractFactoryGUI {
+    + Botao criarBotao()
+    + Janela criarJanela()
+}
+
+class FactoryUnixGUI extends AbstractFactoryGUI {
+    + Botao criarBotao()
+    + Janela criarJanela()
+}
+
+class FactoryWindowsGUI extends AbstractFactoryGUI {
+    + Botao criarBotao()
+    + Janela criarJanela()
+}
+
+AbstractFactoryMain --> AbstractFactoryGUI
+
+note as N1
+    <b><color:royalBlue>Abstract Factory</color></b>
+    <b>Type:</b> Creational
+    Provides an interface for creating
+    families of related or dependent
+    objects without specifying their
+    concrete class.
+end note
+@enduml
