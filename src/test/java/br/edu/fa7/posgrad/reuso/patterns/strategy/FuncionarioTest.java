@@ -2,11 +2,9 @@ package br.edu.fa7.posgrad.reuso.patterns.strategy;
 
 import br.edu.fa7.posgrad.reuso.patterns.strategy.interfaces.ModoRegistroPonto;
 import br.edu.fa7.posgrad.reuso.patterns.strategy.interfaces.ModoTrabalho;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
-import static org.mockito.Mockito.mock;
-import static org.mockito.Mockito.times;
-import static org.mockito.Mockito.verify;
+import static org.mockito.Mockito.*;
 
 /**
  * User: <a href="mailto:marcos.nas.p@gmail.com">marcos.nas.p@gmail.com</a>
