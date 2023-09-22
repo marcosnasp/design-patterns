@@ -1,0 +1,20 @@
+name: CircleCI and SonarCloud
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: circleci/circleci-cli@v2
+        with:
+          cmd: run
+          args: [--no-interaction]
+      - uses: sonarcloud/sonarcloud-action@v2
+        with:
+          organization: marcosnasp
+          project: marcosnasp_design-patterns
