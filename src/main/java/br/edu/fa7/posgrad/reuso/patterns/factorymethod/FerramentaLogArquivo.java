@@ -1,7 +1,6 @@
 package br.edu.fa7.posgrad.reuso.patterns.factorymethod;
 
 import java.io.File;
-import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.OutputStream;
@@ -39,8 +38,6 @@ public class FerramentaLogArquivo extends FerramentaLog {
         try {
             out = new FileOutputStream(arquivo);
             out.write(saida.getBytes(StandardCharsets.UTF_8));
-        } catch (FileNotFoundException e) {
-            LOG.info(e.getMessage());
         } catch (IOException e) {
             LOG.info(e.getMessage());
         }  
