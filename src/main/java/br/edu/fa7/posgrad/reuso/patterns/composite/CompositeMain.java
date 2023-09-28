@@ -13,14 +13,14 @@ public class CompositeMain {
     public static void main(String[] args) {
 
         Component arquivo = new Arquivo("NomeArquivo.java", 1.2);
-        List<Component> arquivos = new ArrayList<Component>();
+        List<Component> arquivos = new ArrayList<>();
         arquivos.add(arquivo);
 
         Component pasta = new Pasta("NomePasta", arquivos);
 
         pasta.imprimir();
 
-        List<Component> arquivosList = new ArrayList<Component>();
+        List<Component> arquivosList = new ArrayList<>();
         arquivosList.add(arquivo);
         arquivosList.add(arquivo);
 

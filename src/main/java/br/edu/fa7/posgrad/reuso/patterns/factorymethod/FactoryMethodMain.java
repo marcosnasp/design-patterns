@@ -9,9 +9,6 @@ public class FactoryMethodMain {
 
     public static void main(String[] args) {
 
-        EscrevedorLog escrevedorLog = new EscrevedorLogConsole();
-        EscrevedorLog escrevedorLogArquivo = new EscrevedorLogArquivo();
-
         FerramentaLog ferramentaLogArquivo = new FerramentaLogArquivo();
         FerramentaLog ferramentaLogConsole = new FerramentaLogConsole();
 

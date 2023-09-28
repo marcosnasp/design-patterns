@@ -1,6 +1,12 @@
 package br.edu.fa7.posgrad.reuso.patterns.factorymethod;
 
-import java.io.*;
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.OutputStream;
+import java.nio.charset.StandardCharsets;
+import java.util.logging.Logger;
 
 /**
  * User: <a href="mailto:marcos.nas.p@gmail.com">marcos.nas.p@gmail.com</a>
@@ -8,6 +14,8 @@ import java.io.*;
  * Time: 08:07
  */
 public class FerramentaLogArquivo extends FerramentaLog {
+
+    private static final Logger LOG = Logger.getLogger(FerramentaLogArquivo.class.getName());
 
     private ArquivoLog arquivoLog;
 
@@ -30,14 +38,11 @@ public class FerramentaLogArquivo extends FerramentaLog {
 
         try {
             out = new FileOutputStream(arquivo);
-            out.write(saida.getBytes("UTF-8"));
+            out.write(saida.getBytes(StandardCharsets.UTF_8));
         } catch (FileNotFoundException e) {
-            e.printStackTrace();
-        } catch (UnsupportedEncodingException e) {
-            e.printStackTrace();
+            LOG.info(e.getMessage());
         } catch (IOException e) {
-            e.printStackTrace();
-        }
-
+            LOG.info(e.getMessage());
+        }  
     }
 }

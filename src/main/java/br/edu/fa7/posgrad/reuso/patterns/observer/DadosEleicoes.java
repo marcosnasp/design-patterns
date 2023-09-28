@@ -1,10 +1,10 @@
 package br.edu.fa7.posgrad.reuso.patterns.observer;
 
-import br.edu.fa7.posgrad.reuso.patterns.observer.interfaces.Observer;
-import br.edu.fa7.posgrad.reuso.patterns.observer.interfaces.Subject;
-
 import java.util.ArrayList;
 import java.util.List;
+
+import br.edu.fa7.posgrad.reuso.patterns.observer.interfaces.Observer;
+import br.edu.fa7.posgrad.reuso.patterns.observer.interfaces.Subject;
 
 /**
  * User: <a href="mailto:osmundo02@gmail.com">osmundo02@gmail.com</a>
@@ -22,7 +22,7 @@ public class DadosEleicoes implements Subject {
 	public String votos;
 	
 	public DadosEleicoes() {
-		observadores = new ArrayList<Observer>();
+		observadores = new ArrayList<>();
 	}
 	
 	@Override
